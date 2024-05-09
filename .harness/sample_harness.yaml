@@ -69,7 +69,7 @@ pipeline:
                   name: Build And Push image to DockerHub
                   identifier: Build_And_Push_image_to_DockerHub
                   spec:
-                    connectorRef: <+input>
-                    repo: <+input>
+                    connectorRef: dockerconnector
+                    repo: vivekzalariya13/demo-harness
                     tags:
                       - latest
