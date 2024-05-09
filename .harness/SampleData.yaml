@@ -1,0 +1,37 @@
+inputSet:
+  pipeline:
+    identifier: sample_harness
+    properties:
+      ci:
+        codebase:
+          build:
+            spec:
+              branch: main
+            type: branch
+    stages:
+      - stage:
+          identifier: Build
+          type: CI
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: Run_Test_Case
+                    type: Run
+                    spec:
+                      connectorRef: dockerconnector
+                - step:
+                    identifier: Build_app
+                    type: Run
+                    spec:
+                      connectorRef: dockerconnector
+                - step:
+                    identifier: Build_And_Push_image_to_DockerHub
+                    type: BuildAndPushDockerRegistry
+                    spec:
+                      connectorRef: dockerconnector
+                      repo: vivekzalariya13/demo-harness
+  name: SampleData
+  identifier: SampleData
+  orgIdentifier: default
+  projectIdentifier: default_project
