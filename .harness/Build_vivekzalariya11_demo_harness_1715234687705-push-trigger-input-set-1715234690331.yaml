@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_vivekzalariya11_demo_harness_1715234687705-push-trigger-input-set
+  identifier: Build_vivekzalariya11_demo_harness_1715234687705pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_vivekzalariya11_demo_harness_1715234687705
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
