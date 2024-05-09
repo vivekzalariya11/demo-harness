@@ -1,0 +1,35 @@
+pipeline:
+  name: sample harness
+  identifier: sample_harness
+  projectIdentifier: default_project
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: samplepipeline
+        repoName: harness-community/go-pipeline-sample
+        build: <+input>
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Print Message Hello world
+                  identifier: Print_Message_Hello_world
+                  spec:
+                    shell: Sh
+                    command: echo "Hello world !!!"
