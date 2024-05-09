@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_vivekzalariya11_demo_harness_1715234687705-pr-trigger-input-set
+  identifier: Build_vivekzalariya11_demo_harness_1715234687705prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_vivekzalariya11_demo_harness_1715234687705
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
