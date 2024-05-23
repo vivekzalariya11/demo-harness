@@ -33,3 +33,4 @@ pipeline:
                   spec:
                     shell: Sh
                     command: echo "Hello world !!!"
+                  description: <+input>
