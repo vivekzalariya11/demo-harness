@@ -1,0 +1,22 @@
+inputSet:
+  name: Test
+  identifier: Test
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: sample_harness
+    properties:
+      ci:
+        codebase:
+          build: <+input>
+    stages:
+      - stage:
+          identifier: Build
+          type: CI
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: Print_Message_Hello_world
+                    type: Run
+                    description: For Printing Hello world
